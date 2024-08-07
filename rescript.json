@@ -1,5 +1,5 @@
 {
-  "name": "rescript-fetch",
+  "name": "@plow-technologies/rescript-fetch",
   "sources": [
     {
       "dir": "src",
