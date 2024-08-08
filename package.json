@@ -1,5 +1,5 @@
 {
-  "name": "@plow-technologies/rescript-fetch",
+  "name": "@plowtech/rescript-fetch",
   "version": "0.5.2",
   "description": "ReScript Bindings for the Fetch API",
   "main": "index.js",
