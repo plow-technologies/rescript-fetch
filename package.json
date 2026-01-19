@@ -23,8 +23,7 @@
   },
   "homepage": "https://github.com/plow-technologies/rescript-fetch#readme",
   "dependencies": {
-    "@rescript/core": "^1.5.2",
-    "rescript": "^11.1.3"
+    "rescript": "^12.1.0"
   },
   "devDependencies": {
     "@rescript/react": "^0.13.0",
