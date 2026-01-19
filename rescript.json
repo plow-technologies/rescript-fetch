@@ -4,11 +4,6 @@
     {
       "dir": "src",
       "subdirs": true
-    },
-    {
-      "dir": "tests",
-      "subdirs": true,
-      "type": "dev"
     }
   ],
   "package-specs": [
@@ -17,19 +12,5 @@
       "in-source": true
     }
   ],
-  "suffix": ".res.js",
-  "bs-dependencies": [
-    "@rescript/core",
-    "@rescript/react"
-  ],
-  "bs-dev-dependencies": [
-    "rescript-test",
-    "rescript-webapi"
-  ],
-  "bsc-flags": [
-    "-open RescriptCore"
-  ],
-  "jsx": {
-    "version": 4
-  }
+  "suffix": ".res.js"
 }
