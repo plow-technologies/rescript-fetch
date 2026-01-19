@@ -4,7 +4,6 @@
   "description": "ReScript Bindings for the Fetch API",
   "main": "index.js",
   "scripts": {
-    "test": "retest --with-dom tests/*.res.js",
     "res:build": "rescript",
     "res:dev": "rescript -w",
     "res:clean": "rescript clean"
@@ -24,14 +23,5 @@
   "homepage": "https://github.com/plow-technologies/rescript-fetch#readme",
   "dependencies": {
     "rescript": "^12.1.0"
-  },
-  "devDependencies": {
-    "@rescript/react": "^0.13.0",
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/react": "^16.0.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "rescript-test": "^7.0.1",
-    "rescript-webapi": "^0.9.1"
   }
 }
