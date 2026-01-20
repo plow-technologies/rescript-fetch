@@ -110,8 +110,8 @@ type requestRedirect =
 module HeadersInit: {
   type t = headersInit
 
-  external make: Js.t<{..}> => t = "%identity"
-  external makeWithDict: Js.Dict.t<string> => t = "%identity"
+  external make: {..} => t = "%identity"
+  external makeWithDict: dict<string> => t = "%identity"
   external makeWithArray: array<(string, string)> => t = "%identity"
 }
 
@@ -160,19 +160,19 @@ module Body: {
   external bodyUsed: t => bool = "bodyUsed"
 
   @send
-  external arrayBuffer: t => Js.Promise.t<arrayBuffer> = "arrayBuffer"
+  external arrayBuffer: t => promise<arrayBuffer> = "arrayBuffer"
 
   @send
-  external blob: t => Js.Promise.t<blob> = "blob"
+  external blob: t => promise<blob> = "blob"
 
   @send
-  external formData: t => Js.Promise.t<formData> = "formData"
+  external formData: t => promise<formData> = "formData"
 
   @send
-  external json: t => Js.Promise.t<Js.Json.t> = "json"
+  external json: t => promise<JSON.t> = "json"
 
   @send
-  external text: t => Js.Promise.t<string> = "text"
+  external text: t => promise<string> = "text"
 }
 
 module RequestInit: {
@@ -249,19 +249,19 @@ module Request: {
   external bodyUsed: t => bool = "bodyUsed"
 
   @send
-  external arrayBuffer: t => Js.Promise.t<arrayBuffer> = "arrayBuffer"
+  external arrayBuffer: t => promise<arrayBuffer> = "arrayBuffer"
 
   @send
-  external blob: t => Js.Promise.t<blob> = "blob"
+  external blob: t => promise<blob> = "blob"
 
   @send
-  external formData: t => Js.Promise.t<formData> = "formData"
+  external formData: t => promise<formData> = "formData"
 
   @send
-  external json: t => Js.Promise.t<Js.Json.t> = "json"
+  external json: t => promise<JSON.t> = "json"
 
   @send
-  external text: t => Js.Promise.t<string> = "text"
+  external text: t => promise<string> = "text"
 }
 
 module Response: {
@@ -309,29 +309,29 @@ module Response: {
   external bodyUsed: t => bool = "bodyUsed"
 
   @send
-  external arrayBuffer: t => Js.Promise.t<arrayBuffer> = "arrayBuffer"
+  external arrayBuffer: t => promise<arrayBuffer> = "arrayBuffer"
 
   @send
-  external blob: t => Js.Promise.t<blob> = "blob"
+  external blob: t => promise<blob> = "blob"
 
   @send
-  external formData: t => Js.Promise.t<formData> = "formData"
+  external formData: t => promise<formData> = "formData"
 
   @send
-  external json: t => Js.Promise.t<Js.Json.t> = "json"
+  external json: t => promise<JSON.t> = "json"
 
   @send
-  external text: t => Js.Promise.t<string> = "text"
+  external text: t => promise<string> = "text"
 }
 
 @val
-external fetch: string => Js.Promise.t<response> = "fetch"
+external fetch: string => promise<response> = "fetch"
 
 @val
-external fetchWithInit: (string, requestInit) => Js.Promise.t<response> = "fetch"
+external fetchWithInit: (string, requestInit) => promise<response> = "fetch"
 
 @val
-external fetchWithRequest: request => Js.Promise.t<response> = "fetch"
+external fetchWithRequest: request => promise<response> = "fetch"
 
 @val
-external fetchWithRequestInit: (request, requestInit) => Js.Promise.t<response> = "fetch"
+external fetchWithRequestInit: (request, requestInit) => promise<response> = "fetch"
